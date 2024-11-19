@@ -1,0 +1,18 @@
+reset
+unset key
+
+## Plot
+## to screen
+set term wxt size 1600,800 persist
+## to PNG file
+#set term png
+#set output "plot-image.png"
+
+## Setup
+set logscale y 10
+set yrange [0.00001:0.1]
+set border lw 1 lc "0x00888888"
+#set grid
+#plot 'plot_data.txt' with linespoints pt 5 lc "black"
+#plot 'plot_data.txt' with points pt 5 lc "black"
+plot 'plot_data.txt' with lines lc "black"
